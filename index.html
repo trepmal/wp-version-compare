@@ -277,12 +277,12 @@ jQuery(document).ready( function($) {
 	$('span.to').html( init_lt );
 
 	$( "#slider-range" ).slider({
-	 	range: true,
-	 	min: 2.9,
-	 	max: 3.8,
-	 	step: .1,
-	 	values: [ init_gt, init_lt ],
-	 	slide: function( event, ui ) {
+		range: true,
+		min: 2.9,
+		max: 3.8,
+		step: .1,
+		values: [ init_gt, init_lt ],
+		slide: function( event, ui ) {
 			_hide( $('.group'), ui.values[0], ui.values[1] );
 			$('span.from').html( ui.values[0] );
 			$('span.to').html( ui.values[1] );
