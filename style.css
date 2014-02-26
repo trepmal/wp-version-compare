@@ -1,0 +1,61 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "source sans pro";
+	background: #e7eded;
+}
+.container {
+	text-align: center;
+}
+.page {
+	width: 600px;
+	margin: 0 auto;
+	text-align: left;
+}
+#slider-range + p {
+	text-align: center;
+}
+ul {
+	margin: 0 60px;
+	padding: 0;
+	position: relative;
+}
+li {
+	list-style: none;
+	padding: 5px;
+}
+li.heading {
+	position: absolute;
+	right: calc( 100% + 4px );
+	border-top: 2px solid black;
+	width: 30px;
+	text-align: right;
+}
+.release:before,
+.feature:before,
+.bugfix:before,
+.security:before,
+.dev:before {
+	font-family: 'Genericons';
+	position: relative;
+	top: 2px;
+	right: 4px;
+	color: #099;
+}
+.release:before {
+	content: '\f302';
+}
+.feature:before {
+	content: '\f408';
+}
+.bugfix:before {
+	content: '\f456';
+	top: 3px;
+}
+.security:before {
+	content: '\f470';
+}
+.dev:before {
+	content: '\f462';
+	top: 3px;
+}
