@@ -7,16 +7,11 @@
 	<title>WP Compare</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
- -->
 
 	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="//trepmal.com/wp-content/themes/defenestrate/genericons/genericons.css">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="style.css">
-	<!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.css"> -->
 
 </head>
 
@@ -252,15 +247,14 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script>
-	jQuery(document).ready( function($) {
+jQuery(document).ready( function($) {
 
 	function _hide( el, lt, gt ) {
-		//var el, gt, lt;
+
 		el.show();
 
 		el.filter(function() {
 			if ( typeof lt == 'undefined' ) {
-				//true so far
 				lt = -999999;
 			}
 			if ( typeof gt == 'undefined' ) {
@@ -276,7 +270,6 @@
 
 	}
 
-
 	init_gt = 3.1;
 	init_lt = 3.5;
 	_hide( $('.group'), init_gt, init_lt );
@@ -284,21 +277,19 @@
 	$('span.to').html( init_lt );
 
 	$( "#slider-range" ).slider({
-	  range: true,
-	  min: 2,
-	  max: 3.8,
-	  step: .1,
-	  values: [ init_gt, init_lt ],
-	  slide: function( event, ui ) {
-
-		_hide( $('.group'), ui.values[0], ui.values[1] );
-		$('span.from').html( ui.values[0] );
-		$('span.to').html( ui.values[1] );
-
-	  }
+	 	range: true,
+	 	min: 2.9,
+	 	max: 3.8,
+	 	step: .1,
+	 	values: [ init_gt, init_lt ],
+	 	slide: function( event, ui ) {
+			_hide( $('.group'), ui.values[0], ui.values[1] );
+			$('span.from').html( ui.values[0] );
+			$('span.to').html( ui.values[1] );
+		}
 	});
 
-	});
+});
 </script>
 </body>
 </html>
