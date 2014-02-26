@@ -12,6 +12,16 @@ body {
 	margin: 0 auto;
 	text-align: left;
 }
+h1 a {
+	text-decoration: none;
+	font-size: 50%;
+	display: inline-block;
+	background: lightgrey;
+	border-radius: 5px;
+	padding: 5px;
+	position: relative;
+	top: -3px;
+}
 #slider-range + p {
 	text-align: center;
 }
